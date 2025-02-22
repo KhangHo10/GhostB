@@ -1,0 +1,135 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background: linear-gradient(90deg, #5a78d6, #1a2a5d);
+    color: white;
+    padding: 15px;
+    border-radius: 10px 7px 0 0;
+    text-align: left;
+    height: 100px;
+}
+
+.balance {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.recent-transactions {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    text-indent: 450px;
+
+}
+
+.card-and-transactions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card {
+    background: rgb(3, 3, 66);
+    color: white;
+    width: 400px;
+    height: 130px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-number {
+    font-size: 14px;
+    margin-top: 5px; /* Adds some space between name and number */
+}
+
+.transactions {
+    flex-grow: 1;
+    margin-left: 20px; /* Adds space between the card and the transactions table */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligns the content to the right */
+}
+
+.transactions table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: right; /* Right-aligns table content */
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: right; /* Ensures the content in the cells is right-aligned */
+}
+
+th {
+    background: #eee;
+}
+
+.negative {
+    color: red;
+}
+
+.money-saved {
+    margin-top: 20px;
+}
+
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+.negative {
+    color: red;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+
