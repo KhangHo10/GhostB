@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost Budget Dashboard</title>
-    <link rel="stylesheet" href="homeGhostPage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ghost Budget Dashboard</title>
+  <link rel="stylesheet" href="homeGhostPage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h3>Wednesday, February 14th</h3>
-            <h1>Welcome Back, User</h1>
-        </div>
-        <div class="balance">Balance: $10,000</div>
-        <div class="recent-transactions">Recent Transactions</div>
-        <div class="card-and-transactions">
-            <div class="card">
-                <div class="card-content">
-                    <div class="name">First Name Last Name</div>
-                    <div class="card-number">1111 1111 1111 1111</div>
-                </div>
-            </div>
-            
-            <div class="transactions">
-                
-                <table>
-                    <tr>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Amount</th>
-                        <th>Balance</th>
-                    </tr>
-                    <tr>
-                        <td>2/21</td>
-                        <td>Publix</td>
-                        <td class="negative">-$15.99</td>
-                        <td>$9,872.55</td>
-                    </tr>
-                    <tr>
-                        <td>2/21</td>
-                        <td>Publix</td>
-                        <td class="negative">-$15.99</td>
-                        <td>$9,872.55</td>
-                    </tr>
-                    <tr>
-                        <td>2/21</td>
-                        <td>Publix</td>
-                        <td class="negative">-$15.99</td>
-                        <td>$9,872.55</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="money-saved">
-            <h3>Money Saved <a href="homePage.html">
-                <button style="background: transparent; border: none; cursor: pointer;">
-                    <i class="fa-solid fa-eye"></i>
-                </button>
-            </a></h3></h3>
-            <h2>$500</h2>
-            
-            <table>
-                <tr>
-                    <th>Description</th>
-                    <th>Amount</th>
-                    <th>Percentage</th>
-                </tr>
-                <tr>
-                    <td>Roth IRA</td>
-                    <td>$500.00</td>
-                    <td>50%</td>
-                </tr>
-                <tr>
-                    <td>High Yield Savings Account</td>
-                    <td>$250.00</td>
-                    <td>50%</td>
-                </tr>
-            </table>
-        </div>
-        <div class="buttons">
-            <button class="button claim-btn">Claim</button>
-            <button class="button save-btn">Continue Saving</button>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h3 id="current-date">Wednesday, February 14th</h3>
+      <h1>Welcome Back, Zara<span id="username"></span></h1>
     </div>
+
+    <div class="balance">
+      Balance: <span id="current-balance">$10,000</span>
+      <!-- Refresh button can also be added here if desired -->
+    </div>
+    <div class="recent-transactions">Recent Transactions</div>
+    
+    <div class="card-and-transactions">
+      <!-- Card on the left -->
+      <div class="card">
+        <div class="card-content">
+          <div class="name" id="card-username">Zara S Maraj</div>
+          <div class="card-number">1111 1111 1111 1111</div>
+        </div>
+      </div>
+      
+      <!-- Transactions (table + search) on the right -->
+      <div class="transactions">
+        <table id="transactions-table">
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Balance</th>
+          </tr>
+          <!-- Transaction rows will be inserted dynamically by JS -->
+        </table>
+        <div class="search-container">
+          <input type="text" class="search-bar" placeholder="2-22-2025, Food, 25.5">
+          <button class="search-button">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Money Saved Section -->
+    <div class="money-saved">
+      <h3>
+        Money Saved
+        <a href="homePage.html">
+          <button style="background: transparent; border: none; cursor: pointer;">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </a>
+      </h3>
+      <h2 id="ghost-budget">$0.00</h2>
+      <table>
+        <tr>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Percentage</th>
+        </tr>
+        <tr>
+          <td>Roth IRA</td>
+          <td id="roth-ira">$0.00</td>
+          <td>50%</td>
+        </tr>
+        <tr>
+          <td>High Yield Savings Account</td>
+          <td id="high-yield">$0.00</td>
+          <td>50%</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Buttons for Claim and Continue Saving -->
+    <div class="buttons">
+      <button id="claim-btn" class="button claim-btn">Claim</button>
+      <button id="continue-saving-btn" class="button save-btn">Continue Saving</button>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
 </body>
 </html>

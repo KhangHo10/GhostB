@@ -28,19 +28,22 @@ body {
     font-weight: bold;
     margin: 20px 0;
 }
+
 .recent-transactions {
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
     text-align: center;
     text-indent: 450px;
-
 }
 
+/* Card and Transactions layout */
 .card-and-transactions {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    gap: 20px;
 }
 
 .card {
@@ -51,7 +54,6 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    
 }
 
 .card-content {
@@ -71,35 +73,87 @@ body {
     margin-top: 5px; /* Adds some space between name and number */
 }
 
+/* Transactions section on the right */
 .transactions {
     flex-grow: 1;
-    margin-left: 20px; /* Adds space between the card and the transactions table */
-    width: 100%;
+    margin-left: 20px; /* space between card and transactions */
+    width: 50%;
     display: flex;
-    justify-content: flex-end; /* Aligns the content to the right */
+    flex-direction: column; /* stack table on top and search below */
+    align-items: flex-start; /* left align items */
 }
 
 .transactions table {
-    width: 80%;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    text-align: right; /* Right-aligns table content */
+    font-size: 16px;
 }
 
-th, td {
+/* Table Header */
+.transactions table th {
+    background: #eee;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+    text-align: left;
+}
+
+/* Table Cells */
+.transactions table td {
     border-bottom: 1px solid #ddd;
     padding: 10px;
-    text-align: right; /* Ensures the content in the cells is right-aligned */
 }
 
-th {
-    background: #eee;
+/* Column alignment */
+.transactions table td:nth-child(1),
+.transactions table td:nth-child(2) {
+    text-align: left;
+}
+
+.transactions table td:nth-child(3),
+.transactions table td:nth-child(4) {
+    text-align: left;
 }
 
 .negative {
     color: red;
 }
 
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px; /* space between table and search box */
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #425daf;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.search-button:hover {
+    background-color: #1a2a5d;
+}
+
+/* Money Saved Section */
 .money-saved {
     margin-top: 20px;
 }
@@ -110,20 +164,18 @@ th {
     margin-top: 10px;
 }
 
-th, td {
+.money-saved th,
+.money-saved td {
     border-bottom: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
-th {
+.money-saved th {
     background: #eee;
 }
 
-.negative {
-    color: red;
-}
-
+/* Buttons */
 .buttons {
     margin-top: 20px;
 }
@@ -134,8 +186,7 @@ th {
     cursor: pointer;
     border-radius: 5px;
     margin-right: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Ensures consistent font */
-
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .claim-btn {
