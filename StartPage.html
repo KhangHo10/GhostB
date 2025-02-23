@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to GhostB</title>
+  <style>
+    /* Full screen with gradient background */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: white;
+    }
+    
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    .welcome-text {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .start-button {
+      font-size: 24px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: #380684;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .start-button:hover {
+      background: #e0e0e0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-text">Welcome to GhostB</div>
+    <a href="homePage.html">
+      <button class="start-button">Start</button>
+    </a>
+  </div>
+</body>
+</html>
