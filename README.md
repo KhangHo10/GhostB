@@ -12,18 +12,26 @@ GhostB is a full-stack financial management web application that **leverages mac
 
 ## Tech Stack 🏗️  
 
-Frontend: HTML, CSS, JavaScript
-Backend: FastAPI, SQLAlchemy, SQLite, Scikit-learn, Pydantic, Uvicorn
+• Frontend: HTML, CSS, JavaScript
+• Backend: FastAPI, SQLAlchemy, SQLite, Scikit-learn, Pydantic, Uvicorn
 
 ## Visual 📸
 
-https://youtu.be/dicX5VP31wc
+[![Watch the demo](https://img.youtube.com/vi/dicX5VP31wc/0.jpg)](https://www.youtube.com/watch?v=dicX5VP31wc)  
 
-> ()  
+## Installation 🔧
 
-## 📖 How It Works  
+1. Create a codespace within GitHub
+2. Type "pip install -r requirements.txt"
+3. Then type "uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+4. Then type localhost:3000 on your browser
+
+## How It Works 📖 
 
 1. **Users enter an expense** (date, type, and amount).  
 2. **The ML model analyzes the expense** and determines if it is **necessary or unnecessary**.  
 3. **If unnecessary**, the system inflates the charge **by up to 60%**, making the user more mindful of extra spending.  
-4. **The extra "ghost budget" is saved**, and users can **claim it back** or allocate it to savings.  
+4. **The extra "ghost budget" is saved**, and users can **claim it back** or allocate it to savings.
+
+   
+
