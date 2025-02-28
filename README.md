@@ -12,8 +12,8 @@ GhostB is a full-stack financial management web application that **leverages mac
 
 ## Tech Stack 🏗️  
 
-• Frontend: HTML, CSS, JavaScript
-• Backend: FastAPI, SQLAlchemy, SQLite, Scikit-learn, Pydantic, Uvicorn
+- **Frontend: HTML, CSS, JavaScript**
+- **Backend: FastAPI, SQLAlchemy, SQLite, Scikit-learn, Pydantic, Uvicorn** 
 
 ## Visual 📸
 
